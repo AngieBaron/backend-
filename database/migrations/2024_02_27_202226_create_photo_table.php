@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhotDetailsTale extends Migration
+class CreatePhotoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePhotDetailsTale extends Migration
      */
     public function up()
     {
-        Schema::create('phot_details_tale', function (Blueprint $table) {
+        Schema::create('photo', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePhotDetailsTale extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phot_details_tale');
+        Schema::dropIfExists('photo');
     }
 }

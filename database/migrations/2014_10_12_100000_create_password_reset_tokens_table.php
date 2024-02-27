@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhotTable extends Migration
+class CreatePasswordResetTokensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePhotTable extends Migration
      */
     public function up()
     {
-        Schema::create('phot', function (Blueprint $table) {
+        Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePhotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phot');
+        Schema::dropIfExists('password_reset_tokens');
     }
 }
